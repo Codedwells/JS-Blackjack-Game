@@ -8,7 +8,7 @@ body {
 #UI-container {
 	display: flex;
 	flex-direction: column;
-	background-color: aquamarine;
+	/* background-color: aquamarine; */
 	width: 100%;
 	min-width: 300px;
 	height: 100%;
@@ -18,9 +18,8 @@ body {
 	align-items: center;
 	justify-content: center;
 	color: rgb(240, 176, 14);
-	font-size: 22px;
-	/* background-color: gray; */
-	height: 80px;
+	font-size: 22;
+	height: 50px;
 }
 #card-box {
 	display: flex;
@@ -32,7 +31,7 @@ body {
 }
 #card-box div {
 	display: inline-block;
-	background-color: bisque;
+	/* background-color: bisque; */
 	height: 229px;
 	width: 320px;
 	border-radius: 6px;
@@ -48,10 +47,13 @@ body {
 	gap: 15px;
 	margin-top: 20px;
 }
+#bidAmount {
+	color: goldenrod;
+}
 button {
 	cursor: pointer;
 	background-color: #35654d;
-	color: white;
+	color: goldenrod;
 	border: none;
 	height: 40px;
 	border-radius: 6px;
@@ -67,16 +69,20 @@ button:active {
 	color: #35654d;
 }
 #credits-box {
-	margin-left: 20px;
+	margin-left: 22px;
+	font-size: 18px;
+	color: antiquewhite;
 }
 #msg-box {
-	background-color: grey;
+	background-color: #2f6b4d;
+	font-size: 20px;
+	color: antiquewhite;
+	padding: 4px;
 	min-width: 500px;
 	max-width: 1060px;
 	height: 200px;
 	width: 530px;
 	border-radius: 10px;
-	padding: 4px;
 	font-weight: 700;
 	margin: 0px 0px 10px 20px;
 }
