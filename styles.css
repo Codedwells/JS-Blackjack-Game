@@ -35,9 +35,14 @@ body {
 	height: 229px;
 	width: 320px;
 	border-radius: 6px;
-	background-image: url("/images/ace.png");
+	/* background-image: url("/images/ace.png"); */
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+#card-box img {
+	height: 229px;
+	width: 320px;
+	object-fit: contain;
 }
 #btn-box {
 	display: flex;
