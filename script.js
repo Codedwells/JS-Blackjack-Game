@@ -29,5 +29,13 @@ bidDownBtn.addEventListener("click", function () {
 //New card
 newCardBtn.addEventListener("click", function () {
 	getRnmNumber();
-	sumCards.textContent += randomNum;
+	const card1 = randomNum;
+	getRnmNumber();
+	const card2 = randomNum;
+	getRnmNumber();
+	const card3 = randomNum;
+	getRnmNumber();
+	const card4 = randomNum;
+	dealerMessage.textContent += card1 + " ";
+	console.log(card1, card2, card3, card4);
 });

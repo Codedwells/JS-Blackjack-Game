@@ -60,9 +60,9 @@ body {
 #bidAmount {
 	color: goldenrod;
 }
-#sumOfCards {
+#sum-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	color: goldenrod;
@@ -113,7 +113,7 @@ button:active {
 		margin-top: 60px;
 		margin-bottom: 0px;
 	}
-	#sumOfCards {
+	#sum-container {
 		margin-top: -50px;
 	}
 	#game-title {
@@ -139,7 +139,7 @@ button:active {
 		width: 160px;
 		object-fit: contain;
 	}
-	#sumOfCards {
+	#sum-container {
 		margin-top: -70px;
 	}
 }
