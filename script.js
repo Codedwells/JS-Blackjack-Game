@@ -28,6 +28,7 @@ bidDownBtn.addEventListener("click", function () {
 });
 //New card
 newCardBtn.addEventListener("click", function () {
+	let sum = 0;
 	getRnmNumber();
 	const card1 = randomNum;
 	getRnmNumber();
@@ -36,6 +37,13 @@ newCardBtn.addEventListener("click", function () {
 	const card3 = randomNum;
 	getRnmNumber();
 	const card4 = randomNum;
+	//sum
+	if (card1 + card2 < 21) {
+		sum = card1 + card2 + card3;
+	} else if (sum1 < 21) {
+		sum += card4;
+	}
+	sumCards.textContent += " " + sum;
 	dealerMessage.textContent += card1 + " ";
 	console.log(card1, card2, card3, card4);
 });
