@@ -1,10 +1,11 @@
 body {
 	background-image: url("/images/casino-green.jpg");
 	background-size: contain;
-	min-width: 590px; /*1060 */
-	max-width: 1060px;
+	min-width: 640px; /*1060 */
+	max-width: 700px;
 	font-family: Helvetica, sans-serif;
 }
+
 #UI-container {
 	display: flex;
 	flex-direction: column;
@@ -19,14 +20,14 @@ body {
 	justify-content: center;
 	color: rgb(240, 176, 14);
 	font-size: 22;
-	height: 50px;
+	height: 70px;
 }
 #card-box {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	gap: 10px;
+	gap: 1px;
 	margin: 10px 5px;
 }
 #card-box div {
@@ -43,6 +44,23 @@ body {
 	height: 229px;
 	width: 320px;
 	object-fit: contain;
+}
+@media screen and (max-width: 700px) {
+	#game-title {
+		font-size: 35px;
+		margin-bottom: 25px;
+	}
+	#card-box {
+		margin-top: 40px;
+	}
+	#card-box img {
+		height: 114px;
+		width: 160px;
+		object-fit: contain;
+	}
+	#sumOfCards {
+		margin-top: -70px;
+	}
 }
 #btn-box {
 	display: flex;
