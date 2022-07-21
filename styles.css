@@ -92,7 +92,7 @@ button:active {
 	font-size: 18px;
 	color: antiquewhite;
 }
-#msg-box {
+#msgBox {
 	background-color: #2f6b4d;
 	font-size: 20px;
 	color: antiquewhite;
@@ -109,22 +109,23 @@ button:active {
 	body {
 		margin-left: 320px;
 	}
-	#card-box{
+	#card-box {
 		margin-top: 60px;
 		margin-bottom: 0px;
 	}
-	#sumOfCards{
+	#sumOfCards {
 		margin-top: -50px;
 	}
 	#game-title {
 		padding-top: 20px;
 	}
-	#msg-box{
+	#msgBox {
 		margin-left: 70px;
 	}
-	#credits-box{
+	#credits-box {
 		margin-left: 72px;
 	}
+}
 @media screen and (max-width: 700px) {
 	#game-title {
 		font-size: 35px;
