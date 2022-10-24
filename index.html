@@ -6,24 +6,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Play Black Jack</title>
 		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
 		<link rel="shortcut icon" href="/images/favicon_io/favicon.ico" type="image/x-icon">
 	</head>
-	<body>
+	<body onload="firstCard()">
+		<!-- Pop up -->
+		<section class="notif">
+			<p id="notif-text">Wanna Play?</p> 
+			<div class="btn-container">
+				<button class="notif-btn" onclick="closeNotif()">
+					Yes!
+				</button>
+			</div>
+		</section>
 		<div class="UI">
 			<div id="UI-container">
 				<div id="game-title"><h1>Black Jack</h1></div>
 				<!-- Cards box -->
 				<div id="card-box">
-					<div id="card1"><img src="/images/five.png" alt=""></div>
-					<div id="card2"><img src="/images/eight.png" alt=""></div>
-					<div id="card3"><img src="/images/jack.png" alt=""></div>
-					<div id="card4"><img src="/images/ace.png" alt=""></div>
+					<div  class="card"><img id="card1" src="" alt="No Card Yet!!"></div>
+					<div  class="card"><img id="card2" src="" alt="No Card Yet!!"></div>
+					<div  class="card"><img id="card3" src="" alt="No Card Yet!!"></div>
+					<div  class="card"><img id="card4" src="" alt="No Card Yet!!"></div>
 				</div>
 				<div id="sum-container">Sum: <p id="sumOfCards"> </p></div>
 				<!-- buttons -->
 				<div id="btn-box">
-					
-					<button id="newGame">New Game</button>
+					<button id="newGame" onclick="refresh()">New Game</button>
 					<button id="newCard">New Card</button>
 					<button id="bidUp">Bid &#8593</button>
 					<button id="bidDown">Bid &#8595</button>
@@ -33,9 +42,10 @@
 					<h3 id="creditsAvailable">Credits:</h3>
 				</div>
 				<!-- message box -->
-				<div id="msgBox">Dealer Message :</div>
+				<div id="msgBox">Dealer Message : <br/>
+					<p id="msgBox1">Start?</p>
+				</div>
 			</div>
 		</div>
-		<script src="script.js"></script>
 	</body>
 </html>

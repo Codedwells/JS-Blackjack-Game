@@ -1,145 +1,189 @@
 body {
-	background-image: url("/images/casino-green.jpg");
-	background-size: contain;
-	min-width: 640px; /*1060 */
-	max-width: 700px;
-	font-family: Helvetica, sans-serif;
+  background-image: url("/images/casino-green.jpg");
+  background-size: contain;
+  font-family: Helvetica, sans-serif;
 }
-
 #UI-container {
-	/* display: flex;
-	flex-direction: column; */
-	/* background-color: aquamarine; */
-	width: 100%;
-	min-width: 300px;
-	height: 100%;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
-
+.UI {
+  display: flex;
+  flex-direction: row;
+}
 #game-title {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: rgb(240, 176, 14);
-	font-size: 22;
-	height: 70px;
-	font-size: 35px;
-	margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(240, 176, 14);
+  font-size: 22;
+  height: 70px;
+  font-size: 35px;
+  margin-bottom: 25px;
 }
 #card-box {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1px;
-	margin: 10px 5px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 100%;
 }
 #card-box div {
-	display: inline-block;
-	/* background-color: bisque; */
-	height: 229px;
-	width: 320px;
-	border-radius: 6px;
-	/* background-image: url("/images/ace.png"); */
-	background-size: contain;
-	background-repeat: no-repeat;
+  display: inline-block;
+  height: 229px;
+  width: 237px;
+  border-radius: 6px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
 #card-box img {
-	height: 114px;
-	width: 160px;
-	object-fit: contain;
+  height: 98%;
+  width: auto;
+  object-fit: contain;
 }
 
 #btn-box {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	gap: 15px;
-	margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 #bidAmount {
-	color: goldenrod;
+  margin: 5px;
+  color: goldenrod;
 }
 #sum-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	color: goldenrod;
-	font-size: 20px;
-	font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: goldenrod;
+  font-size: 20px;
+  font-weight: 700;
+}
+.notif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  background-color: #256b48;
+  border-radius: 15px;
+  width: 80vw;
+  height: 50vh;
+  position: absolute;
+}
+#notif-text {
+  text-align: center;
+  font-weight: 700;
+  color: goldenrod;
+  font-size: 60px;
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
+}
+.notif-btn{
+  border: 2px solid goldenrod;
+  display: block;
 }
 button {
-	cursor: pointer;
-	background-color: #2f6b4d;
-	color: goldenrod;
-	border: none;
-	height: 40px;
-	border-radius: 6px;
-	font-weight: 700;
-	font-size: 20px;
-	transition: opacity background-color color 0.15s;
+  cursor: pointer;
+  background-color: #2f6b4d;
+  color: goldenrod;
+  border: none;
+  height: 40px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 20px;
+  transition: opacity background-color color 0.15s;
 }
 button:hover {
-	opacity: 0.8;
+  opacity: 0.8;
 }
 button:active {
-	background-color: goldenrod;
-	color: #2f6b4d;
+  background-color: goldenrod;
+  color: #2f6b4d;
 }
 #credits-box {
-	margin-left: 22px;
-	font-size: 18px;
-	color: antiquewhite;
+  margin-left: 22px;
+  font-size: 18px;
+  color: antiquewhite;
 }
 #msgBox {
-	background-color: #2f6b4d;
-	font-size: 20px;
-	color: antiquewhite;
-	padding: 4px;
-	min-width: 500px;
-	max-width: 1060px;
-	height: 150px;
-	width: 530px;
-	border-radius: 10px;
-	font-weight: 700;
-	margin: 0px 0px 10px 20px;
+  background-color: #2f6b4d;
+  font-size: 20px;
+  color: antiquewhite;
+  padding: 4px;
+  max-width: 1060px;
+  height: 150px;
+  width: 530px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin: auto;
 }
-@media screen and (min-width: 700px) {
-	body {
-		margin-left: 320px;
-	}
-	#card-box {
-		margin-top: 60px;
-		margin-bottom: 0px;
-	}
-	#sum-container {
-		margin-top: -50px;
-	}
-	#game-title {
-		padding-top: 20px;
-	}
-	#msgBox {
-		margin-left: 70px;
-	}
-	#credits-box {
-		margin-left: 72px;
-	}
+.active {
+  display: block;
 }
-@media screen and (max-width: 700px) {
-	#game-title {
-		font-size: 35px;
-		margin-bottom: 25px;
-	}
-	#card-box {
-		margin-top: 40px;
-	}
-	#card-box img {
-		height: 114px;
-		width: 160px;
-		object-fit: contain;
-	}
-	#sum-container {
-		margin-top: -70px;
-	}
+.hiddden {
+  display: none;
+}
+@media screen and (max-width: 840px) {
+  #game-title {
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+  #card-box img {
+    height: 98%;
+    width: auto;
+    object-fit: contain;
+  }
+  #card-box img:hover {
+    height: 100%;
+    transition: height ease 3ms;
+  }
+  #sum-container {
+    margin-top: -70px;
+  }
+  #card-box {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  #sum-container {
+    margin-top: 2px;
+  }
+}
+@media screen and (max-width: 428px) {
+  #card-box {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100%;
+  }
+  #card-box {
+    width: 40%;
+  }
+  #game-title {
+    font-size: 25px;
+  }
+  #msgBox {
+    text-align: left;
+    font-size: 15px;
+    height: 100px;
+    width: 352px;
+  }
+  button {
+    font-size: 18px;
+  }
+  #sum-container {
+    margin-top: 20px;
+  }
 }
