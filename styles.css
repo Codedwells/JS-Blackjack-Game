@@ -1,5 +1,5 @@
 body {
-  background-image: url("/images/casino-green.jpg");
+  background-image: url("./images/casino-green.jpg");
   background-size: contain;
   font-family: Helvetica, sans-serif;
 }
